@@ -20,11 +20,32 @@ body {
   color: var(--primary-color-text);
 }
 
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+img {
+  margin: 0 auto;
+}
+
 /* удалення крапочок напроти пунктів списку */
 ul {
   list-style: none;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  background-color: #ccc;
+  outline: 2px solid tomato;
+}
+
+/* шапка */
 /* логотип */
 .logo {
   color: var(--accent-color);
@@ -58,6 +79,10 @@ ul {
   color: var(--accent-color);
 }
 
+.site-contacts {
+  margin: 0;
+}
+
 .site .site-link:hover,
 .site .site-link:focus {
   color: var(--accent-color);
@@ -72,6 +97,7 @@ ul {
   color: var(--primary-color-text);
 }
 
+/* сторінка портфоліо */
 /* фільтри */
 .visually-hidden {
   position: absolute;
@@ -114,35 +140,49 @@ ul {
 /* секція реклама */
 .promo {
   background-color: var(--color-bg-promo-footer);
+  outline: tomato;
 }
 
 .promo-title {
+  display: inline-block;
+  width: 696;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--color-text-promo);
 }
 
-.promo-button {
+.promo-button.box {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  padding: 10px 32px;
+  width: 216px;
+  height: 50px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 200px;
   background-color: var(--accent-color);
   color: var(--color-text-promo);
   border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
-.box {
+/* .box {
+  padding: 10px 32px;
   width: 216px;
   height: 50px;
+  text-align: center;
   background-color: var(--accent-color);
   border-radius: 4px;
-}
+} */
 
 .promo-button:hover,
 .promo-button:focus {
@@ -150,7 +190,13 @@ ul {
   color: var(--color-text-promo);
 }
 
+.section {
+  margin: 94px auto;
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -159,6 +205,8 @@ ul {
 }
 
 .section .text {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
 }

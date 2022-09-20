@@ -1,0 +1,252 @@
+/* основний фон та колір тексту */
+:root {
+  --accent-color: #2196f3;
+  --primary-color-title: #212121;
+  --color-nav: #212121;
+  --color-bg-promo-footer: #2f303a;
+  --primary-color-text: #757575;
+  --primary-color-bacground: #ffffff;
+  --color-logo-primary: #000000;
+  --color-bg-hero: #f5f4fa;
+  --color-text-promo: #ffffff;
+  --color-link-contacts: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: var(--primary-color-bacground);
+  color: var(--primary-color-text);
+}
+
+/* удалення крапочок напроти пунктів списку */
+ul {
+  list-style: none;
+}
+
+/* логотип */
+.logo {
+  color: var(--accent-color);
+}
+
+.logo-link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--color-logo-primary);
+}
+
+/* навігація сайту */
+.site-pagination .link:hover,
+.site-pagination .link:focus {
+  color: var(--accent-color);
+}
+
+.site-pagination .link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--color-nav);
+}
+
+.site-pagination .link.current {
+  color: var(--accent-color);
+}
+
+.site .site-link:hover,
+.site .site-link:focus {
+  color: var(--accent-color);
+}
+
+.site .site-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--primary-color-text);
+}
+
+/* фільтри */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.site-nav {
+  color: var(--color-nav);
+  cursor: pointer;
+}
+
+.site-nav .site-button:hover,
+.site-nav .site-button:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.site-nav .site-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  font-family: inherit;
+  background-color: #f5f4f4;
+  color: var(--color-nav);
+  border-color: transparent;
+}
+
+/* головна інформація сайту */
+
+/* секція реклама */
+.promo {
+  background-color: var(--color-bg-promo-footer);
+}
+
+.promo-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-promo);
+}
+
+.promo-button {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--color-text-promo);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.box {
+  width: 216px;
+  height: 50px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.promo-button:hover,
+.promo-button:focus {
+  background-color: #188ceb;
+  color: var(--color-text-promo);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-color-title);
+}
+
+.section .text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.galery-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--primary-color-title);
+}
+
+.aside .aside-link {
+  text-decoration: none;
+}
+
+.aside-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-color-title);
+}
+
+.aside-text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--primary-color-text);
+}
+
+/* герої */
+.hero {
+  background-color: var(--color-bg-hero);
+}
+
+.hero-meta {
+  background-color: var(--primary-color-bacground);
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--primary-color-title);
+}
+.hero-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--primary-color-title);
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* підвал */
+.contacts {
+  background-color: var(--color-bg-promo-footer);
+}
+
+.contacts .logo-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.contacts-adress:hover,
+.contacts-adress:focus {
+  background-color: var(--color-bg-promo-footer);
+  color: var(--accent-color);
+}
+
+.contacts-adress {
+  text-decoration: none;
+  font-style: normal;
+  line-height: 1.71;
+  color: #ffffff;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  background-color: var(--color-bg-promo-footer);
+  color: var(--accent-color);
+}
+
+.contacts-link {
+  line-height: 1.71;
+  color: var(--color-link-contacts);
+  font-style: normal;
+  text-decoration: none;
+}

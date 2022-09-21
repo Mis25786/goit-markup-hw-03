@@ -25,9 +25,14 @@ a,
 h1,
 h2,
 h3,
-h4,
+h4 {
+  margin: 0 0;
+}
+
+ul,
 img {
-  margin: 0 auto;
+  margin: 0 0;
+  padding-left: 0;
 }
 
 /* удалення крапочок напроти пунктів списку */
@@ -36,43 +41,86 @@ ul {
 }
 
 .container {
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
-  background-color: #ccc;
   outline: 2px solid tomato;
 }
 
 /* шапка */
-/* логотип */
-.logo {
-  color: var(--accent-color);
+
+.site .container {
+  display: flex;
+  align-items: center;
 }
 
-.logo-link {
-  text-decoration: none;
+/* логотип */
+
+.container .logo-link {
+  /* display: block; */
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  margin-right: 93px;
+
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  text-decoration: none;
+
   color: var(--color-logo-primary);
+  outline: 2px solid red;
+}
+
+.container .logo {
+  color: var(--accent-color);
 }
 
 /* навігація сайту */
+
+.site {
+  background-color: #ccc;
+}
+
+.site-pagination {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 344px;
+}
+
 .site-pagination .link:hover,
 .site-pagination .link:focus {
   color: var(--accent-color);
 }
 
 .site-pagination .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--color-nav);
+  outline: 2px solid red;
+}
+
+.site-pagination .item {
+  margin-right: 50px;
+}
+
+.site-pagination .item:last-child {
+  margin-right: 0;
 }
 
 .site-pagination .link.current {
@@ -80,7 +128,11 @@ ul {
 }
 
 .site-contacts {
-  margin: 0;
+  display: flex;
+}
+
+.site-contacts .item + .item {
+  margin-left: 50px;
 }
 
 .site .site-link:hover,
@@ -89,12 +141,18 @@ ul {
 }
 
 .site .site-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
   color: var(--primary-color-text);
+  outline: 2px solid red;
 }
 
 /* сторінка портфоліо */
@@ -144,30 +202,39 @@ ul {
 }
 
 .promo-title {
-  display: inline-block;
-  width: 696;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
+  width: 696px;
+  text-align: center;
+
+  background-color: #188ceb;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--color-text-promo);
 }
 
 .promo-button.box {
+  display: inline-block;
+  /* padding: 10px 32px; */
+  width: 216px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  align-items: center;
+  text-align: center;
+
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
-  width: 216px;
-  height: 50px;
-  border-radius: 4px;
-  text-align: center;
-  margin-bottom: 200px;
+
   background-color: var(--accent-color);
   color: var(--color-text-promo);
   border-color: transparent;
@@ -190,6 +257,8 @@ ul {
   color: var(--color-text-promo);
 }
 
+/* наші особливості */
+
 .section {
   margin: 94px auto;
 }
@@ -205,16 +274,45 @@ ul {
 }
 
 .section .text {
+  width: 270px;
+
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
 }
 
+.section .item {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.section .item:last-child {
+  margin-right: 0;
+}
+
+/* чим ми займаємось */
+
+.galery .item {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 94px;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.galery .item:last-child {
+  margin-right: 0;
+}
+
 .galery-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  text-align: center;
+
   color: var(--primary-color-title);
 }
 
@@ -241,11 +339,23 @@ ul {
   background-color: var(--color-bg-hero);
 }
 
-.hero-meta {
+.hero .hero-meta {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 94px;
+
   background-color: var(--primary-color-bacground);
 }
 
+.hero .hero-meta:last-child {
+  margin-right: 0;
+}
+
 .hero-title {
+  padding-top: 94px;
+  padding-bottom: 50px;
+  text-align: center;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;

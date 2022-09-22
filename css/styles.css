@@ -29,10 +29,15 @@ h4 {
   margin: 0 0;
 }
 
-ul,
-img {
+ul {
   margin: 0 0;
   padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* удалення крапочок напроти пунктів списку */
@@ -53,9 +58,12 @@ ul {
 
 /* шапка */
 
-.site .container {
-  display: flex;
+.site {
   align-items: center;
+}
+
+.box {
+  display: flex;
 }
 
 /* логотип */
@@ -74,17 +82,21 @@ ul {
   text-decoration: none;
 
   color: var(--color-logo-primary);
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 .container .logo {
   color: var(--accent-color);
 }
 
+nav {
+  display: flex;
+}
+
 /* навігація сайту */
 
 .site {
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 
 .site-pagination {
@@ -112,7 +124,7 @@ ul {
   letter-spacing: 0.02em;
 
   color: var(--color-nav);
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 .site-pagination .item {
@@ -152,10 +164,13 @@ ul {
   text-decoration: none;
 
   color: var(--primary-color-text);
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
+/* головна інформація сайту */
+
 /* сторінка портфоліо */
+
 /* фільтри */
 .visually-hidden {
   position: absolute;
@@ -193,22 +208,28 @@ ul {
   border-color: transparent;
 }
 
-/* головна інформація сайту */
-
 /* секція реклама */
+
 .promo {
   background-color: var(--color-bg-promo-footer);
+
   outline: tomato;
 }
 
+.promo-box {
+  padding-top: 200px;
+  text-align: center;
+}
+
 .promo-title {
+  margin-bottom: 30px;
+  max-width: 696px;
+  text-align: center;
+  /* padding-top: 200px; */
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 30px;
-  width: 696px;
-  text-align: center;
 
-  background-color: #188ceb;
+  outline: 2px solid tomato;
 
   font-weight: 900;
   font-size: 44px;
@@ -218,16 +239,11 @@ ul {
   color: var(--color-text-promo);
 }
 
-.promo-button.box {
-  display: inline-block;
-  /* padding: 10px 32px; */
-  width: 216px;
+.promo-button {
+  min-width: 216px;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 4px;
-  align-items: center;
-  text-align: center;
+  margin-bottom: 200px;
 
   font-family: "Roboto";
   font-weight: 700;
@@ -242,15 +258,6 @@ ul {
   cursor: pointer;
 }
 
-/* .box {
-  padding: 10px 32px;
-  width: 216px;
-  height: 50px;
-  text-align: center;
-  background-color: var(--accent-color);
-  border-radius: 4px;
-} */
-
 .promo-button:hover,
 .promo-button:focus {
   background-color: #188ceb;
@@ -259,13 +266,24 @@ ul {
 
 /* наші особливості */
 
-.section {
-  margin: 94px auto;
+.subtitle {
+  padding-top: 94px;
+}
+
+.category {
+  display: flex;
+}
+
+.category > .item {
+  margin-bottom: 94px;
+  /* flex-basis: calc(100% / 4); */
+
+  outline: 1px solid fuchsia;
 }
 
 .section-title {
-  margin-top: 0;
   margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -274,10 +292,6 @@ ul {
 }
 
 .section .text {
-  width: 270px;
-
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
 }
@@ -291,14 +305,18 @@ ul {
   margin-right: 0;
 }
 
-/* чим ми займаємось */
+/* чим ми займаємось галерея */
 
-.galery .item {
+.item img {
+  outline: 1px solid orangered;
+}
+
+.galery-item > .item {
   display: inline-block;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   margin-bottom: 94px;
-  /* margin: 0;
-  padding: 0; */
+
+  /* flex-basis: calc(100% / 3); */
 }
 
 .galery .item:last-child {

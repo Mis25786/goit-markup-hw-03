@@ -53,7 +53,6 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
-  outline: 2px solid tomato;
 }
 
 /* шапка */
@@ -68,7 +67,7 @@ ul {
 
 /* логотип */
 
-.container .logo-link {
+.logo-link {
   /* display: block; */
   padding-top: 24px;
   padding-bottom: 25px;
@@ -82,7 +81,6 @@ ul {
   text-decoration: none;
 
   color: var(--color-logo-primary);
-  /* outline: 2px solid red; */
 }
 
 .container .logo {
@@ -124,7 +122,6 @@ nav {
   letter-spacing: 0.02em;
 
   color: var(--color-nav);
-  /* outline: 2px solid red; */
 }
 
 .site-pagination .item {
@@ -164,7 +161,6 @@ nav {
   text-decoration: none;
 
   color: var(--primary-color-text);
-  /* outline: 2px solid red; */
 }
 
 /* головна інформація сайту */
@@ -172,6 +168,7 @@ nav {
 /* сторінка портфоліо */
 
 /* фільтри */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -187,8 +184,17 @@ nav {
 }
 
 .site-nav {
+  display: block;
+  display: flex;
+  padding-bottom: 50px;
+  padding-top: 94px;
+  gap: 8px;
+  text-align: center;
+
   color: var(--color-nav);
   cursor: pointer;
+
+  background-color: #ccc;
 }
 
 .site-nav .site-button:hover,
@@ -198,7 +204,10 @@ nav {
   cursor: pointer;
 }
 
-.site-nav .site-button {
+.site-button {
+  text-align: center;
+  align-items: center;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -208,12 +217,22 @@ nav {
   border-color: transparent;
 }
 
+/* card-asaid */
+
+.card-asaide {
+  display: flex;
+
+  background-color: tomato;
+}
+
+.asaide {
+  display: block;
+}
+
 /* секція реклама */
 
 .promo {
   background-color: var(--color-bg-promo-footer);
-
-  outline: tomato;
 }
 
 .promo-box {
@@ -228,8 +247,6 @@ nav {
   /* padding-top: 200px; */
   margin-right: auto;
   margin-left: auto;
-
-  outline: 2px solid tomato;
 
   font-weight: 900;
   font-size: 44px;
@@ -266,19 +283,20 @@ nav {
 
 /* наші особливості */
 
-.subtitle {
+.section {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .category {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
 }
 
 .category > .item {
-  margin-bottom: 94px;
-  /* flex-basis: calc(100% / 4); */
-
-  outline: 1px solid fuchsia;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-right: 30px;
 }
 
 .section-title {
@@ -307,16 +325,13 @@ nav {
 
 /* чим ми займаємось галерея */
 
-.item img {
-  outline: 1px solid orangered;
+.galery-item {
+  gap: 30px;
+  display: flex;
 }
 
 .galery-item > .item {
-  display: inline-block;
-  /* margin-right: 30px; */
   margin-bottom: 94px;
-
-  /* flex-basis: calc(100% / 3); */
 }
 
 .galery .item:last-child {
@@ -353,20 +368,20 @@ nav {
 }
 
 /* герої */
+
 .hero {
   background-color: var(--color-bg-hero);
 }
 
-.hero .hero-meta {
-  display: inline-block;
-  margin-right: 30px;
+.hero-meta {
+  display: block;
   margin-bottom: 94px;
 
-  background-color: var(--primary-color-bacground);
-}
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-.hero .hero-meta:last-child {
-  margin-right: 0;
+  background-color: var(--primary-color-bacground);
 }
 
 .hero-title {
@@ -379,7 +394,20 @@ nav {
   line-height: 1.17;
   color: var(--primary-color-title);
 }
+
+.hero-box {
+  display: flex;
+  gap: 30px;
+}
+
+.hero-foto {
+  margin-bottom: 30px;
+}
+
 .hero-name {
+  text-align: center;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -387,6 +415,9 @@ nav {
 }
 
 .hero-text {
+  text-align: center;
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.19;
 }
@@ -401,6 +432,21 @@ nav {
   color: #ffffff;
 }
 
+.contacts-box {
+  padding-bottom: 60px;
+}
+
+.contacts .footer-logo {
+  padding-bottom: 20px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-right: 0px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
 .contacts-adress:hover,
 .contacts-adress:focus {
   background-color: var(--color-bg-promo-footer);
@@ -408,6 +454,8 @@ nav {
 }
 
 .contacts-adress {
+  margin-bottom: 9px;
+
   text-decoration: none;
   font-style: normal;
   line-height: 1.71;
@@ -421,6 +469,8 @@ nav {
 }
 
 .contacts-link {
+  margin-bottom: 9px;
+
   line-height: 1.71;
   color: var(--color-link-contacts);
   font-style: normal;

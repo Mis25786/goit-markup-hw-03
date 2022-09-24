@@ -94,7 +94,7 @@ nav {
 /* навігація сайту */
 
 .site {
-  /* background-color: #ccc; */
+  border: 1px solid #ececec;
 }
 
 .site-pagination {
@@ -169,6 +169,10 @@ nav {
 
 /* фільтри */
 
+.sait-section {
+  padding-bottom: 94px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -184,17 +188,14 @@ nav {
 }
 
 .site-nav {
-  display: block;
   display: flex;
   padding-bottom: 50px;
   padding-top: 94px;
   gap: 8px;
-  text-align: center;
+  justify-content: center;
 
   color: var(--color-nav);
   cursor: pointer;
-
-  background-color: #ccc;
 }
 
 .site-nav .site-button:hover,
@@ -207,6 +208,8 @@ nav {
 .site-button {
   text-align: center;
   align-items: center;
+  padding: 6px 22px;
+  height: 38px;
 
   font-weight: 500;
   font-size: 16px;
@@ -215,9 +218,37 @@ nav {
   background-color: #f5f4f4;
   color: var(--color-nav);
   border-color: transparent;
+  border-radius: 4px;
+}
+
+.button-one {
+  width: 73px;
+}
+
+.button-two {
+  width: 125px;
+}
+
+.button-three {
+  width: 112px;
+}
+
+.button-four {
+  width: 103px;
+}
+
+.button-five {
+  width: 130px;
 }
 
 /* card-asaid */
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
 
 .card-asaide {
   display: flex;
@@ -225,8 +256,20 @@ nav {
   background-color: tomato;
 }
 
-.asaide {
+.aside {
   display: block;
+  border: 1px solid #eeeeee;
+}
+
+.card-foto {
+  margin-bottom: 20px;
+}
+
+.aside-title {
+  margin-bottom: 4px;
+}
+.aside-text {
+  margin-bottom: 20px;
 }
 
 /* секція реклама */

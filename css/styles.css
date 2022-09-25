@@ -59,6 +59,7 @@ ul {
 
 .site {
   align-items: center;
+  border-bottom: 1px solid #ececec;
 }
 
 .box {
@@ -68,10 +69,6 @@ ul {
 /* логотип */
 
 .logo-link {
-  /* display: block; */
-  padding-top: 24px;
-  padding-bottom: 25px;
-
   margin-right: 93px;
 
   font-family: "Raleway", sans-serif;
@@ -83,6 +80,10 @@ ul {
   color: var(--color-logo-primary);
 }
 
+.header-logo {
+  padding-top: 24px;
+}
+
 .container .logo {
   color: var(--accent-color);
 }
@@ -92,10 +93,6 @@ nav {
 }
 
 /* навігація сайту */
-
-.site {
-  border: 1px solid #ececec;
-}
 
 .site-pagination {
   display: flex;
@@ -170,6 +167,7 @@ nav {
 /* фільтри */
 
 .sait-section {
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -189,8 +187,7 @@ nav {
 
 .site-nav {
   display: flex;
-  padding-bottom: 50px;
-  padding-top: 94px;
+  margin-bottom: 50px;
   gap: 8px;
   justify-content: center;
 
@@ -218,7 +215,6 @@ nav {
   background-color: #f5f4f4;
   color: var(--color-nav);
   border-color: transparent;
-  border-radius: 4px;
 }
 
 .button-one {
@@ -246,8 +242,11 @@ nav {
 .card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+}
+
+.aside {
+  display: block;
 }
 
 .card-asaide {
@@ -256,30 +255,27 @@ nav {
   background-color: tomato;
 }
 
-.aside {
-  display: block;
-  border: 1px solid #eeeeee;
-}
+.card-text {
+  padding: 20px 24px;
 
-.card-foto {
-  margin-bottom: 20px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .aside-title {
   margin-bottom: 4px;
 }
-.aside-text {
-  margin-bottom: 20px;
-}
 
 /* секція реклама */
 
 .promo {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--color-bg-promo-footer);
 }
 
 .promo-box {
-  padding-top: 200px;
   text-align: center;
 }
 
@@ -303,7 +299,6 @@ nav {
   min-width: 216px;
   height: 50px;
   border-radius: 4px;
-  margin-bottom: 200px;
 
   font-family: "Roboto";
   font-weight: 700;
@@ -357,24 +352,19 @@ nav {
   line-height: 1.71;
 }
 
-.section .item {
-  display: inline-block;
-  margin-right: 30px;
-}
-
 .section .item:last-child {
   margin-right: 0;
 }
 
 /* чим ми займаємось галерея */
 
+.galery {
+  padding-bottom: 94px;
+}
+
 .galery-item {
   gap: 30px;
   display: flex;
-}
-
-.galery-item > .item {
-  margin-bottom: 94px;
 }
 
 .galery .item:last-child {
@@ -413,12 +403,12 @@ nav {
 /* герої */
 
 .hero {
+  padding: 94px 0;
   background-color: var(--color-bg-hero);
 }
 
 .hero-meta {
   display: block;
-  margin-bottom: 94px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -428,8 +418,7 @@ nav {
 }
 
 .hero-title {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   text-align: center;
 
   font-weight: 700;
@@ -441,6 +430,8 @@ nav {
 .hero-box {
   display: flex;
   gap: 30px;
+  /* flex-basis: calc((100% - 90px) / 4); */
+  /* flex-basis: calc(100% / 4 -90px); */
 }
 
 .hero-foto {
@@ -467,6 +458,7 @@ nav {
 
 /* підвал */
 .contacts {
+  padding: 60px 0;
   background-color: var(--color-bg-promo-footer);
 }
 
@@ -475,19 +467,13 @@ nav {
   color: #ffffff;
 }
 
-.contacts-box {
-  padding-bottom: 60px;
-}
-
 .contacts .footer-logo {
-  padding-bottom: 20px;
 }
 
 .footer-logo {
   display: inline-block;
   margin-right: 0px;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .contacts-adress:hover,
@@ -497,8 +483,6 @@ nav {
 }
 
 .contacts-adress {
-  margin-bottom: 9px;
-
   text-decoration: none;
   font-style: normal;
   line-height: 1.71;
@@ -509,6 +493,10 @@ nav {
 .contacts-link:focus {
   background-color: var(--color-bg-promo-footer);
   color: var(--accent-color);
+}
+
+.contacts-box {
+  margin-bottom: 9px;
 }
 
 .contacts-link {

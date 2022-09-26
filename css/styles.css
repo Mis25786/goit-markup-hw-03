@@ -215,6 +215,8 @@ nav {
   background-color: #f5f4f4;
   color: var(--color-nav);
   border-color: transparent;
+  border: none;
+  border-radius: 4px;
 }
 
 .button-one {
@@ -247,6 +249,7 @@ nav {
 
 .aside {
   display: block;
+  /* flex-basis: calc((100% - 60px) / 3); */
 }
 
 .card-asaide {
@@ -431,7 +434,7 @@ nav {
   display: flex;
   gap: 30px;
   /* flex-basis: calc((100% - 90px) / 4); */
-  /* flex-basis: calc(100% / 4 -90px); */
+  /* flex-basis: calc(100% / 4 - 90px); */
 }
 
 .hero-foto {
